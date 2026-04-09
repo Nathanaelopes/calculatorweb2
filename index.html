@@ -8,75 +8,47 @@
     <link rel="stylesheet" href="css.css">
 </head>
 <body> 
-    <DIV id="calculadora">
+    <div id="calculadora">
 
-        
-    <p><input id="resultado" disabled></p> <br>
+        <input id="resultado" disabled>
 
-    
- 
-    
-    <div id="botoes">   
-         <input  class="orange" type="button" value="C" onclick="clean()"> 
-         <input class="orange" type="button" value="()" class="num" onclick="insertToDisplay('')" disabled> 
-         <input class='orange' type="button" value="%" class="num" onclick="insertToDisplay('%')" disabled> 
-         <input class='orange' type="button" value="/" class="num" onclick="insertToDisplay('/')"> 
+        <div id="botoes">   
+            <button class="orange" onclick="clean()">C</button> 
+            <button class="orange" disabled>()</button> 
+            <button class="orange" disabled>%</button> 
+            <button class="orange" onclick="insertToDisplay('/')">÷</button> 
 
+            <button onclick="insertToDisplay('7')">7</button>
+            <button onclick="insertToDisplay('8')">8</button>
+            <button onclick="insertToDisplay('9')">9</button>
+            <button class="orange" onclick="insertToDisplay('*')">×</button>
 
+            <button onclick="insertToDisplay('4')">4</button>
+            <button onclick="insertToDisplay('5')">5</button>
+            <button onclick="insertToDisplay('6')">6</button>
+            <button class="orange" onclick="insertToDisplay('-')">-</button>  
 
+            <button onclick="insertToDisplay('1')">1</button>
+            <button onclick="insertToDisplay('2')">2</button> 
+            <button onclick="insertToDisplay('3')">3</button> 
+            <button class="orange" onclick="insertToDisplay('+')">+</button> 
 
-    <input  class="num"  type="button" value="7" onclick="insertToDisplay('7')">
-    <input type="button"class="num" value="8" onclick="insertToDisplay('8')">
-    <input type="button" value="9" class="num" onclick="insertToDisplay('9')">
-     <input class="orange" type="button" value="x" onclick="insertToDisplay('*')">
+            <button id="zero" onclick="insertToDisplay('0')">0</button> 
+            <button class="orange" onclick="insertToDisplay('.')">.</button> 
+            <button class="orange" onclick="back()">⌫</button> 
+            <button class="orange" onclick="result()">=</button>  
+        </div>
+    </div>
 
-
-    <input type="button" value="4" class="num" onclick="insertToDisplay('4')"> 
-    <input type="button" value="5" class="num" onclick="insertToDisplay('5')">
-    <input type="button" value="6" class="num" onclick="insertToDisplay('6')">
-
-    <input class="orange" type="button" value="-"onclick="insertToDisplay('-')">  
-
-    <input type="button" value="1" class="num" onclick="insertToDisplay('1')">
-    <input type="button" value="2" class="num" onclick="insertToDisplay('2')"> 
-    <input type="button" value="3" class="num" onclick="insertToDisplay('3')"> 
-
-     <input class="orange" type="button" value="+" onclick="insertToDisplay('+')"> 
-
-    
-
-     <input id="zero" type="button" value="0" class="num" onclick="insertToDisplay('0')"> 
-
-     <input class="orange" type="button" value="," class="num" onclick="insertToDisplay(',')"> 
-     
-     <input  class="orange" type="button" value="<-" onclick="back()"> 
-
-    <input  class="orange" type="button" value="=" onclick="result()">  
-
-
-   
-
-    
-   
-     </div>
-</DIV>
-
-<div class="principal">
-
-   
-
-<div id="cores">
-<input type="button" value="azul" onclick="trocarcor('blue')">
-<input type="button" value="vermelho" onclick="trocarcor('red')">
-<input type="button" value="roxo" onclick="trocarcor('purple')">
-<input type="button" value="verde" onclick="trocarcor('green')">
-<input type="button" value="dourado" onclick="trocarcor('gold')">
-<input type="button" value="preto" onclick="trocarcor('black')">
-<input type="button" value="branco" onclick="trocarcor('white')">
-<input type="button" value="laranja" onclick="trocarcor('orange')">
- </div>
-
-</div>
- 
+    <div id="cores">
+        <button onclick="trocarcor('blue')">Azul</button>
+        <button onclick="trocarcor('red')">Vermelho</button>
+        <button onclick="trocarcor('purple')">Roxo</button>
+        <button onclick="trocarcor('green')">Verde</button>
+        <button onclick="trocarcor('gold')">Dourado</button>
+        <button onclick="trocarcor('black')">Preto</button>
+        <button onclick="trocarcor('white')">Branco</button>
+        <button onclick="trocarcor('orange')">Laranja</button>
+    </div>
 </body>
 </html>

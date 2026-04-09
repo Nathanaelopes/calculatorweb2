@@ -1,76 +1,105 @@
 body {
     margin: 0;
     height: 100vh;
-    background: #1e1e1e;
+    background: #121212;
+    font-family: Arial, sans-serif;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-#calculadora {
-    background: #2a2a2a;
-    padding: 20px;
+.container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.calculator {
+    background: #1f1f1f;
+    padding: 15px;
     border-radius: 15px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
 }
 
-#resultado {
+.display {
     width: 100%;
     height: 50px;
-    font-size: 24px;
-    text-align: right;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     border: none;
     border-radius: 8px;
-    padding: 10px;
-    background: #111;
+    font-size: 22px;
+    text-align: right;
+    padding: 8px;
+    background: #000;
     color: #fff;
 }
 
-#botoes {
+.buttons {
     display: grid;
-    grid-template-columns: repeat(4, 60px);
-    gap: 10px;
-}
-
-button {
-    height: 60px;
-    border: none;
-    border-radius: 10px;
-    font-size: 18px;
-    cursor: pointer;
-    background: #3a3a3a;
-    color: white;
-    transition: 0.2s;
-}
-
-button:hover {
-    background: #505050;
-}
-
-.orange {
-    background: #ff9500;
-    color: white;
-}
-
-.orange:hover {
-    background: #e08900;
-}
-
-#zero {
-    grid-column: span 2;
-}
-
-#cores {
-    position: absolute;
-    bottom: 20px;
-    display: flex;
+    grid-template-columns: repeat(4, 1fr);
     gap: 8px;
 }
 
-#cores button {
-    height: 30px;
-    font-size: 12px;
-    padding: 5px;
+button {
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #333;
+    color: #fff;
+    cursor: pointer;
+}
+
+ 
+.operator { background: #ff9500; }
+.equals { background: #00c853; }
+.zero { grid-column: span 2; }
+
+.theme {
+    color: white;
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(4, 25px);
+    gap: 6px;
+    margin-top: 10px;
+}
+
+.colors button {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.blue { background: blue; }
+.red { background: red; }
+.purple { background: purple; }
+.green { background: green; }
+.gold { background: gold; }
+.black { background: black; }
+.white { background: white; border: 1px solid #ccc; }
+.orange { background: orange; }
+
+
+@media (max-width: 600px) {
+
+    .container {
+        flex-direction: column;
+    }
+
+    .calculator {
+        width: 90%;
+        max-width: 320px;
+    }
+
+    button {
+        height: 60px;
+        font-size: 18px;
+    }
+
+    .display {
+        height: 60px;
+        font-size: 24px;
+    }
 }

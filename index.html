@@ -3,52 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>calculadora</title>
-    <script src="js.js"></script>
+    <title>Calculadora</title>
+
     <link rel="stylesheet" href="css.css">
+    <script src="js.js" defer></script>
 </head>
-<body> 
-    <div id="calculadora">
 
-        <input id="resultado" disabled>
+<body>
 
-        <div id="botoes">   
-            <button class="orange" onclick="clean()">C</button> 
-            <button class="orange" disabled>()</button> 
-            <button class="orange" disabled>%</button> 
-            <button class="orange" onclick="insertToDisplay('/')">÷</button> 
+<div class="container">
+
+    <!-- CALCULADORA -->
+    <div class="calculator">
+        <input id="resultado" class="display" disabled>
+
+        <div class="buttons">
+            <button class="action" onclick="clean()">C</button>
+            <button class="action" disabled>()</button>
+            <button class="action" disabled>%</button>
+            <button class="operator" onclick="insertToDisplay('/')">÷</button>
 
             <button onclick="insertToDisplay('7')">7</button>
             <button onclick="insertToDisplay('8')">8</button>
             <button onclick="insertToDisplay('9')">9</button>
-            <button class="orange" onclick="insertToDisplay('*')">×</button>
+            <button class="operator" onclick="insertToDisplay('*')">×</button>
 
             <button onclick="insertToDisplay('4')">4</button>
             <button onclick="insertToDisplay('5')">5</button>
             <button onclick="insertToDisplay('6')">6</button>
-            <button class="orange" onclick="insertToDisplay('-')">-</button>  
+            <button class="operator" onclick="insertToDisplay('-')">-</button>
 
             <button onclick="insertToDisplay('1')">1</button>
-            <button onclick="insertToDisplay('2')">2</button> 
-            <button onclick="insertToDisplay('3')">3</button> 
-            <button class="orange" onclick="insertToDisplay('+')">+</button> 
+            <button onclick="insertToDisplay('2')">2</button>
+            <button onclick="insertToDisplay('3')">3</button>
+            <button class="operator" onclick="insertToDisplay('+')">+</button>
 
-            <button id="zero" onclick="insertToDisplay('0')">0</button> 
-            <button class="orange" onclick="insertToDisplay('.')">.</button> 
-            <button class="orange" onclick="back()">⌫</button> 
-            <button class="orange" onclick="result()">=</button>  
+            <button class="zero" onclick="insertToDisplay('0')">0</button>
+            <button onclick="insertToDisplay('.')">.</button>
+            <button class="action" onclick="back()">⌫</button>
+            <button class="equals" onclick="result()">=</button>
         </div>
     </div>
 
-    <div id="cores">
-        <button onclick="trocarcor('blue')">Azul</button>
-        <button onclick="trocarcor('red')">Vermelho</button>
-        <button onclick="trocarcor('purple')">Roxo</button>
-        <button onclick="trocarcor('green')">Verde</button>
-        <button onclick="trocarcor('gold')">Dourado</button>
-        <button onclick="trocarcor('black')">Preto</button>
-        <button onclick="trocarcor('white')">Branco</button>
-        <button onclick="trocarcor('orange')">Laranja</button>
+    <!-- TEMAS -->
+    <div class="theme">
+        <p>Temas</p>
+
+        <div class="colors">
+            <button class="blue" onclick="trocarcor('blue')"></button>
+            <button class="red" onclick="trocarcor('red')"></button>
+            <button class="purple" onclick="trocarcor('purple')"></button>
+            <button class="green" onclick="trocarcor('green')"></button>
+            <button class="gold" onclick="trocarcor('gold')"></button>
+            <button class="black" onclick="trocarcor('black')"></button>
+            <button class="white" onclick="trocarcor('white')"></button>
+            <button class="orange" onclick="trocarcor('orange')"></button>
+        </div>
     </div>
+
+</div>
+
 </body>
 </html>
